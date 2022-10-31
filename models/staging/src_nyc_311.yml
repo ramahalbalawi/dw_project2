@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+    - name: nyc_311_complaints
+      database: nyc-311-complaints-364200
+      schema: nyc_complaints_dataset
+      tables:
+        - name: nyc_311_water_complaints
+          description: NYC 311 water complaints
+          
+        - name: water_quality
+          description: NYC water quality tests
+            
