@@ -3,8 +3,12 @@ select distinct
                 longitude, 
                 latitude,
                 street_address, 
-                city, 
-                zip_code
+				case
+                when city like '%Bronx%' then 'Bronx'
+				else city
+				end as city,
+                zip_code,
+                sample_site
 from {{ref ('water_data')}}
 )
 select * from water_locations

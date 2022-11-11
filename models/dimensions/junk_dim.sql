@@ -1,6 +1,8 @@
+/* This is just an example of a junk dimension. CROSS JOIN was used to create all possible combnation of attribute values */
+
 with complaint_type as 
 (
-    select distinct complaint_type
+    select distinct descriptor
      FROM {{ref ('complaint_data')}}
 ),
 agency as(

@@ -1,0 +1,8 @@
+version: 2
+
+seeds:
+  - name: water_quality_dataset
+    config:
+      column_types:
+        latitude: FLOAT64
+        longitude: FLOAT64

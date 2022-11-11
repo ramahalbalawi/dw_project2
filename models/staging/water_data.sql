@@ -11,7 +11,8 @@ with water_data as
         fluoride_mg_l as fluoride,
         coliform_quanti_tray_mpn_100ml as coliform,
         e_coli_quanti_tray_mpn_100ml as e_coli,
-    from {{ source('nyc_311_complaints', 'water_quality') }}
+        sample_site
+    from {{ source('nyc_311_complaints', 'water_data_v2') }}
     WHERE latitude IS NOT NULL AND longitude IS NOT NULL
 )
 select * from water_data

@@ -12,7 +12,9 @@ with complaints as
         borough,
         latitude,
         longitude,
-        open_data_channel_type
+        open_data_channel_type,
+        status,
+        unique_key
     from {{ source('nyc_311_complaints', 'nyc_311_water_complaints') }}
     WHERE latitude IS NOT NULL AND longitude IS NOT NULL
 )
